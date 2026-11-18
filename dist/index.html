@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse the independent SKY Shop storefront preview.">
+  <title>SKY Shop</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="shop.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <a class="logo" href="./" aria-label="SKY Shop home">SKY<span>SHOP</span></a>
+    <nav aria-label="Main"><a href="#catalog">Shop</a></nav>
+    <button type="button" class="bag" id="open-bag">Bag <span id="bag-count">0</span></button>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">SKY Shop USA</p>
+        <h1 id="hero-title">Discover your<br>freedom.</h1>
+        <p>Fragrance, footwear and accessories.</p>
+        <a class="primary" href="#catalog">Explore the shop</a>
+      </div>
+      <div class="hero-art" aria-hidden="true"><span>SKY</span></div>
+    </section>
+    <section id="catalog" class="catalog" aria-labelledby="catalog-title">
+      <div class="section-head">
+        <div><p class="eyebrow">Storefront preview</p><h2 id="catalog-title">Shop the edit</h2></div>
+        <p>Sample products and prices for preview.</p>
+      </div>
+      <div id="filters" class="filters" aria-label="Filter by category"></div>
+      <noscript>Enable JavaScript to browse products and use the bag.</noscript>
+      <div id="products" class="products"></div>
+    </section>
+  </main>
+  <footer class="footer">
+    <a href="./" class="logo" aria-label="SKY Shop home">SKY<span>SHOP</span></a>
+  </footer>
+  <dialog id="bag-dialog" aria-labelledby="bag-title">
+    <div class="dialog-head">
+      <h2 id="bag-title">Your bag</h2>
+      <button type="button" id="close-bag" class="close" aria-label="Close bag" autofocus>×</button>
+    </div>
+    <div id="bag-items"></div>
+    <div class="total"><strong>Subtotal</strong><span id="subtotal">$0.00</span></div>
+    <form id="request-form">
+      <p>Preview checkout. Your email app opens a draft with the items in your bag. No payment is collected.</p>
+      <label for="customer">Your name</label>
+      <input id="customer" name="customer" autocomplete="name" maxlength="100" required>
+      <button type="submit" class="primary">Draft a test order</button>
+    </form>
+  </dialog>
+  <p class="sr-only" id="status" role="status"></p>
+</body>
+</html>
