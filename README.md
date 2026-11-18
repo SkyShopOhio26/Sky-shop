@@ -1,5 +1,5 @@
 # SKY Shop
 
-Independent storefront. The prototype uses a sample catalog and does not accept payment.
+Independent storefront preview with category filters, a browser-local bag, and a test order draft. Sample products and prices are for preview. The site does not collect payments or submit orders.
 
-Serve the project directory with `python3 -m http.server 8000`, then open `http://localhost:8000`.
+Run `python3 -m http.server 8000 --directory dist` from the repository root and open `http://localhost:8000`.
